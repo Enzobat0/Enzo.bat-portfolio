@@ -330,7 +330,13 @@ body.dark-theme {
 }
 
 .skills__info{
-  grid
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.skills__data{
+  justify-content: center;
+  text-align: center;
 }
 
 /* Animation skills */
