@@ -329,6 +329,8 @@ body.dark-theme {
   display: grid;
 }
 
+
+
 .skills__info{
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem 2rem;
@@ -341,33 +343,87 @@ body.dark-theme {
 
 /* Animation skills */
 
-
-/*=============== QUALIFICATION ===============*/
-
-
-/*=============== SERVICES ===============*/
-
-
 /*=============== PROJECTS ===============*/
 
+.projects__container{
+  display: flex;
+  flex-direction: column;
+}
 
-/* Swiper class */
+.projects__content{
+  padding: 1.5rem;
+}
+.projects__content img{
+  border-radius: .5rem;
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
+}
 
+.projects__description{
+  padding: .5rem;
+  gap: .5rem;
+}
 
-/*=============== TESTIMONIAL ===============*/
+.projects__button{
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
+}
 
-
-/* Swiper class */
 
 
 /*=============== CONTACT ===============*/
 
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
 
+.box{
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+}
+
+.contact-icons{
+  font-size: larger;
+}
 /* Status color */
 
 
 /*=============== FOOTER ===============*/
+.footer__container{
+  padding: 3rem 0 7rem;
+  text-align: center;
+}
 
+.footer__title{
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1rem;
+}
+
+.footer__list{
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+  column-gap: 2.5rem;
+}
+
+.footer__link{
+  color: var(--title-color);
+}
+
+.footer__link:hover{
+  text-decoration: underline;
+}
+
+.footer__copy{
+  display: block;
+  margin-top: 4.5rem;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
 
 /*=============== SCROLL BAR ===============*/
 
@@ -380,9 +436,98 @@ body.dark-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width:340px) {
+  .container{
+    margin-inline: 1rem;
+  }
 
+  .nav__menu{
+    padding-bottom: 4rem;
+  }
+
+  .nav__list{
+    gap: 1rem 1.25rem;
+  }
+
+  
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav,
+  .nav__menu{
+    width: 380px;
+  }
 
+  .nav{
+    margin: 0 auto;
+  }
+
+  .skills__blob img{
+    width: 50px;
+    height: 50px;
+
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .home__container{
+    grid-template-columns: 3fr 3fr ;
+  }
+}
 
 /* For large devices */
+@media screen and (min-width:1023px){
+  .header{
+    top: 0;
+    bottom: initial;
+    background-color: var(--body-color);
+    transition: .4s;
+  } 
+
+  .nav{
+    width: initial;
+    height: calc(var(--header-height) + 1.5rem);
+    box-shadow: none;
+    border-radius: none;
+    column-gap: 3rem;
+    margin-inline: 1.5rem;
+  }
+
+  .nav__link i,
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+
+  .nav__menu{
+    width: initial;
+    margin-left: auto;
+    background-color: var(--body-color);
+    transition: background .4s;
+  }
+
+  .nav__list{
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  .nav__link{
+    font-size: var(--normal-font-size);
+  }
+
+  .section{
+    padding-block: 8rem 0;
+  }
+
+  .home__title{
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 1048px) {
+  .container{
+    margin-inline: auto;
+    
+  }  
+}
